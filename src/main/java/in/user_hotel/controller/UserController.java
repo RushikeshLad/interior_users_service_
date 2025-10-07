@@ -21,7 +21,10 @@ import in.user_hotel.service.UserService;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin
+@CrossOrigin(origins = {
+	    "http://localhost:4200",
+	    "https://fionastudiointerior.netlify.app"
+	})
 public class UserController {
 	 @Autowired private UserService service;
 
